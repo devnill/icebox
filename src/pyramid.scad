@@ -23,10 +23,13 @@ module pyramid(width, height, edge_radius){
             polyhedron(pyramid_points, pyramid_faces);
         }
         translate([0,0,-edge_radius])cube([width, width, edge_radius]);
+        
     }
-
-
+    translate([(edge_width/2)+edge_radius,(edge_width/2)+edge_radius,0]){
+        cylinder(r=edge_radius, height);
+    }
 }
+
 
 
 
